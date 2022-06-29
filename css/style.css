@@ -44,3 +44,81 @@ nav.navbar > ul {
   list-style: none;
   display: none;
 }
+
+section#headline {
+  background-image: url(../assets/header-illsutration-mobile@2x.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: calc(100vh - 48px - 28px);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section#headline .primary h1 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+}
+
+section#headline .primary h1 span {
+  color: #1e488f;
+}
+
+section#headline .support-text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+section#headline .social ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#headline .social i {
+  margin: 38px 10px;
+  font-size: 20px;
+  color: #505f79;
+  text-align: center;
+}
+
+section#headline .scroll-down-btn {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#headline .scroll-down-btn i {
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  border: 2px solid #acb7c3;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
