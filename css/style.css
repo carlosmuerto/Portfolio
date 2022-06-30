@@ -203,6 +203,7 @@ section#about > header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 section#works > header h2,
@@ -309,6 +310,21 @@ section#works .card-body li {
   line-height: 32px;
   background: #ebeff4;
   color: #3a4a42;
+}
+
+section#about > header img.decoration {
+  position: absolute;
+  z-index: -1;
+}
+
+section#about > header img#decoration1 {
+  top: -40px;
+  right: 0;
+}
+
+section#about > header img#decoration2 {
+  bottom: 20px;
+  left: 0;
 }
 
 section#about .card-body li {
