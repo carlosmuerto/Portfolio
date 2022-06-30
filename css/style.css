@@ -21,6 +21,7 @@ body {
 
 #wrapper {
   margin: 0 auto;
+  margin-bottom: 24px;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -178,11 +179,19 @@ section#headline .scroll-down-btn i {
   align-items: center;
 }
 
-section#works {
+section#works,
+section#about {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 125px auto;
   gap: 64px;
+}
+
+section#works {
+  grid-template-rows: 125px auto;
+}
+
+section#about {
+  grid-template-rows: auto;
 }
 
 section#works > header,
@@ -244,7 +253,6 @@ section#works article .card-img {
 section#works .card-body {
   position: absolute;
   bottom: 0;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -253,7 +261,8 @@ section#works .card-body {
   background-color: #fff;
 }
 
-section#works .card-body h3 {
+section#works .card-body h3,
+section#about .card-body h3 {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -265,7 +274,8 @@ section#works .card-body h3 {
   text-align: center;
 }
 
-section#works .card-body ul {
+section#works .card-body ul,
+section#about .card-body ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -275,11 +285,14 @@ section#works .card-body ul {
   flex-wrap: wrap;
 }
 
-section#works .card-body li {
+section#about .card-body ul {
+  margin-bottom: 24px;
+}
+
+section#works .card-body li,
+section#about .card-body li {
   margin: 4px;
-  padding: 8px 12px;
-  height: 32px;
-  background: #ebeff4;
+  padding: 0 12px;
   border-radius: 4px;
 
   /* fount */
@@ -287,15 +300,26 @@ section#works .card-body li {
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
-  line-height: 32px;
   letter-spacing: 0.03em;
-  color: #3a4a42;
   text-align: center;
+}
+
+section#works .card-body li {
+  height: 32px;
+  line-height: 32px;
+  background: #ebeff4;
+  color: #3a4a42;
+}
+
+section#about .card-body li {
+  height: 40px;
+  line-height: 40px;
+  background: #fff;
+  color: #1e488f;
 }
 
 section#about article.card {
   height: auto;
-  width: 327px;
 }
 
 section#about article.card img {
