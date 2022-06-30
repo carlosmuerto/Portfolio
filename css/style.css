@@ -220,7 +220,8 @@ section#about > header p {
   padding: 0 16px;
 }
 
-section#works article {
+section#works article.card,
+section#about article.card {
   grid-row: auto / span 1;
   grid-column: auto / span 1;
   height: 474px;
@@ -229,6 +230,7 @@ section#works article {
   flex-direction: column;
   position: relative;
   border-radius: 16px;
+  background: #ebeff4;
   border: 2px solid #e2edff;
   margin: 0 16px;
   align-self: center;
@@ -289,4 +291,13 @@ section#works .card-body li {
   letter-spacing: 0.03em;
   color: #3a4a42;
   text-align: center;
+}
+
+section#about article.card {
+  height: auto;
+  width: 327px;
+}
+
+section#about article.card img {
+  margin: 40px;
 }
