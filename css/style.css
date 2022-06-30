@@ -74,7 +74,7 @@ section#headline {
 }
 
 section#works > header .divider {
-  background: #36b37e;
+  background: #1e488f;
   border-radius: 2px;
   height: 4px;
   width: 48px;
@@ -181,11 +181,13 @@ section#works > header h2 {
 section#works article {
   grid-row: auto / span 1;
   grid-column: auto / span 1;
+  height: 474px;
+  width: 327px;
   display: flex;
   flex-direction: column;
   position: relative;
   border-radius: 16px;
-  border: 2px solid red;
+  border: 2px solid #e2edff;
   margin: 0 16px;
 }
 
@@ -231,7 +233,7 @@ section#works .card-body li {
   margin: 4px;
   padding: 8px 12px;
   height: 32px;
-  background: #ebf0ee;
+  background: #ebeff4;
   border-radius: 4px;
 
   /* fount */
@@ -253,6 +255,7 @@ section#works .card-body button {
   align-items: center;
   text-align: center;
   justify-content: center;
+  margin: 24px;
 
   /* fount */
   font-family: 'Inter', sans-serif;
