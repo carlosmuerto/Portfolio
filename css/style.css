@@ -183,4 +183,33 @@ section#works .card-body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
+}
+
+section#works .card-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+section#works .card-body li {
+  margin: 4px;
+  padding: 8px 12px;
+  height: 32px;
+  background: #ebf0ee;
+  border-radius: 4px;
+
+  /* fount */
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 32px;
+  letter-spacing: 0.03em;
+  color: #3a4a42;
+  text-align: center;
 }
