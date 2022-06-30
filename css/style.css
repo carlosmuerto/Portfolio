@@ -61,17 +61,6 @@ section#headline {
   flex-direction: column;
 }
 
-section#works > header h2 {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 52px;
-  margin: 0;
-  padding: 0 32px;
-  text-align: center;
-}
-
 section#works > header .divider {
   background: #36b37e;
   border-radius: 2px;
@@ -166,6 +155,17 @@ section#works > header {
   align-items: center;
 }
 
+section#works > header h2 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  margin: 0;
+  padding: 0 32px;
+  text-align: center;
+}
+
 section#works article {
   /* border: 2px solid red; */
   grid-row: auto / span 1;
@@ -184,6 +184,18 @@ section#works .card-body {
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
+}
+
+section#works .card-body h3 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #3a4a42;
+  padding: 0;
+  margin: 16px 42px;
+  text-align: center;
 }
 
 section#works .card-body ul {
