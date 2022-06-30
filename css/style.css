@@ -167,12 +167,18 @@ section#works > header h2 {
 }
 
 section#works article {
-  /* border: 2px solid red; */
   grid-row: auto / span 1;
   grid-column: auto / span 1;
   display: flex;
   flex-direction: column;
   position: relative;
+  border-radius: 16px;
+  border: 2px solid red;
+  margin: 0 16px;
+}
+
+section#works article .card-img {
+  border-radius: 16px;
 }
 
 section#works .card-body {
@@ -183,6 +189,7 @@ section#works .card-body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  border-radius: 16px;
   background-color: #fff;
 }
 
@@ -224,4 +231,22 @@ section#works .card-body li {
   letter-spacing: 0.03em;
   color: #3a4a42;
   text-align: center;
+}
+
+section#works .card-body button {
+  height: 48px;
+  background: #36b37f;
+  border-radius: 4px;
+  padding: 12px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  /* fount */
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  color: #fff;
 }
