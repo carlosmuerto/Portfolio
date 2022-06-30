@@ -130,3 +130,19 @@ section#headline .scroll-down-btn i {
   justify-content: center;
   align-items: center;
 }
+
+section#works {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 125px auto;
+}
+
+section#works > header {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+}
+
+section#works article {
+  grid-row: auto / span 1;
+  grid-column: auto / span 1;
+}
