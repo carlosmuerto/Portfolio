@@ -3,6 +3,10 @@
   color: #172b4d;
 }
 
+body {
+  margin: 0;
+}
+
 #wrapper {
   margin: 0 auto;
   padding: 0;
@@ -16,7 +20,7 @@ u {
 }
 
 nav.navbar {
-  margin: 0;
+  margin: 0 8px;
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -46,13 +50,11 @@ nav.navbar > ul {
 }
 
 section#headline {
-  background-image: url(../assets/header-illsutration-mobile@2x.png);
+  background-image: url(../assets/headline/header-illsutration-mobile.svg);
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
-  margin: 0;
-  margin-top: 64px;
-  padding: 0;
+  padding: 64px 0;
   display: flex;
   justify-content: center;
   align-items: center;
