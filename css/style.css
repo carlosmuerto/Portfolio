@@ -3,11 +3,29 @@
   color: #172b4d;
 }
 
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+body {
+  margin: 0;
+}
+
 #wrapper {
   margin: 0 auto;
+  margin-bottom: 24px;
   padding: 0;
   display: flex;
   flex-direction: column;
+  gap: 64px;
 }
 
 a,
@@ -15,8 +33,36 @@ u {
   text-decoration: none;
 }
 
+button {
+  height: 48px;
+  background: #1e488f;
+  border-radius: 4px;
+  padding: 12px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 24px;
+
+  /* fount */
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  color: #fff;
+}
+
+button:hover {
+  background: #1e488f;
+  box-shadow: 0 8px 16px rgba(30, 72, 143, 0.24);
+}
+
+button:active {
+  background: #0a2759;
+}
+
 nav.navbar {
-  margin: 0;
+  margin: 0 8px;
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -46,17 +92,21 @@ nav.navbar > ul {
 }
 
 section#headline {
-  background-image: url(../assets/header-illsutration-mobile@2x.png);
-  background-size: contain;
+  background-image: url(../assets/headline/header-illsutration-mobile.svg);
+  background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  margin: 0;
-  margin-top: 64px;
-  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+section#works > header .divider {
+  background: #1e488f;
+  border-radius: 2px;
+  height: 4px;
+  width: 48px;
 }
 
 section#headline .primary h1 {
@@ -127,4 +177,166 @@ section#headline .scroll-down-btn i {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+section#works,
+section#about {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 64px;
+}
+
+section#works {
+  grid-template-rows: 125px auto;
+}
+
+section#about {
+  grid-template-rows: auto;
+}
+
+section#works > header,
+section#about > header {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+section#works > header h2,
+section#about > header h2 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  margin: 0;
+  padding: 0 32px;
+  text-align: center;
+}
+
+section#works > header p,
+section#about > header p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: #42526e;
+  padding: 0 16px;
+}
+
+section#works article.card,
+section#about article.card {
+  grid-row: auto / span 1;
+  grid-column: auto / span 1;
+  height: 474px;
+  width: 327px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 16px;
+  background: #ebeff4;
+  border: 2px solid #e2edff;
+  margin: 0 16px;
+  align-self: center;
+  justify-self: center;
+}
+
+section#works article .card-img {
+  border-radius: 16px;
+}
+
+section#works .card-body {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  background-color: #fff;
+}
+
+section#works .card-body h3,
+section#about .card-body h3 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #3a4a42;
+  padding: 0;
+  margin: 16px 42px;
+  text-align: center;
+}
+
+section#works .card-body ul,
+section#about .card-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+section#about .card-body ul {
+  margin-bottom: 24px;
+}
+
+section#works .card-body li,
+section#about .card-body li {
+  margin: 4px;
+  padding: 0 12px;
+  border-radius: 4px;
+
+  /* fount */
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+section#works .card-body li {
+  height: 32px;
+  line-height: 32px;
+  background: #ebeff4;
+  color: #3a4a42;
+}
+
+section#about > header img.decoration {
+  position: absolute;
+  z-index: -1;
+}
+
+section#about > header img#decoration1 {
+  top: -40px;
+  right: 0;
+}
+
+section#about > header img#decoration2 {
+  bottom: 20px;
+  left: 0;
+}
+
+section#about .card-body li {
+  height: 40px;
+  line-height: 40px;
+  background: #fff;
+  color: #1e488f;
+}
+
+section#about article.card {
+  height: auto;
+}
+
+section#about article.card img {
+  margin: 40px;
 }
