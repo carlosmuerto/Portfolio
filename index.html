@@ -170,13 +170,13 @@
 			</div>
 			<form action="https://formspree.io/f/mnqwkjkw" method="POST">
 				<label>
-					<input type="text" name="name" placeholder="Full Name">
+					<input type="text" name="name" placeholder="Full Name" required maxlength="30">
 				</label>
 				<label>
-					<input type="email" name="email" placeholder="Email Address">
+					<input type="email" name="email" placeholder="Email Address" required>
 				</label>
 				<label>
-					<textarea name="message" placeholder="Enter Text here"></textarea>
+					<textarea name="message" placeholder="Enter Text here" required maxlength="500"></textarea>
 				</label>
 				<!-- your other form fields go here -->
 				<button type="submit">Get in touch</button>
