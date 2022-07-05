@@ -195,7 +195,8 @@ section#about {
 }
 
 section#works > header,
-section#about > header {
+section#about > header,
+section#contact-form > header {
   grid-row: 1 / 2;
   grid-column: 1 / -1;
   display: flex;
@@ -206,7 +207,8 @@ section#about > header {
 }
 
 section#works > header h2,
-section#about > header h2 {
+section#about > header h2,
+section#contact-form > header h2 {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -339,4 +341,36 @@ section#about article.card {
 
 section#about article.card img {
   margin: 40px;
+}
+
+section#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+section#contact-form form {
+  margin: 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section#contact-form form input,
+section#contact-form form textarea {
+  width: 327px;
+  border: 1px solid #d0d9d4;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+section#contact-form form textarea {
+  height: 114px;
 }
