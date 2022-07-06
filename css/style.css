@@ -323,9 +323,15 @@ section#works .card-body li {
   color: #3a4a42;
 }
 
+footer#contact-form > form img.decoration,
 section#about > header img.decoration {
   position: absolute;
   z-index: -1;
+}
+
+footer#contact-form > form img#decoration3 {
+  bottom: 0;
+  right: 0;
 }
 
 section#about > header img#decoration1 {
@@ -368,11 +374,11 @@ footer#contact-form {
 }
 
 footer#contact-form form {
-  margin: 0 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 footer#contact-form form input,
@@ -391,6 +397,24 @@ footer#contact-form form textarea {
   color: #6b778c;
 }
 
+footer#contact-form form textarea::placeholder,
+footer#contact-form form input::placeholder {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  opacity: 1 !important;
+}
+
+footer#contact-form form input::placeholder {
+  color: #6b778c;
+}
+
+footer#contact-form form textarea::placeholder {
+  color: #091e42;
+}
+
 footer#contact-form form textarea {
   height: 114px;
   color: #091e42;
@@ -400,8 +424,6 @@ footer#contact-form form textarea {
 }
 
 footer#contact-form .email {
-  width: 375px;
-  height: 189px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
