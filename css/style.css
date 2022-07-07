@@ -1,5 +1,11 @@
 /* Deleting default styling */
 
+html,
+body {
+  max-width: 100%;
+  overflow: auto;
+}
+
 * > a {
   text-decoration: none;
 }
@@ -106,6 +112,7 @@ section#headline .scroll-down-btn {
 section#works,
 section#about,
 footer#contact-form {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -361,32 +368,49 @@ footer#contact-form form {
   position: relative;
 }
 
-section#headline > img.decoration,
-footer#contact-form > form img.decoration,
-section#about > header img.decoration {
+img.decoration.mobile {
+  display: initial;
   position: absolute;
   z-index: -1;
 }
 
-section#headline img#bg-image-headline-desktop {
+img.decoration.desktop {
   display: none;
+  position: absolute;
+  z-index: -1;
+}
+
+section#headline > img.decoration,
+footer#contact-form img.decoration,
+section#about > header img.decoration {
+  position: absolute;
+  z-index: -1;
 }
 
 section#headline img#bg-image-headline-mobile {
   width: 100vw;
 }
 
-footer#contact-form > form img#form-decoration {
+footer#contact-form img.form-decoration {
   bottom: 0;
   right: 0;
 }
 
-section#about > header img#about-decoration-right {
+footer#contact-form img#form-decoration-left-1-desktop.form-decoration {
+  bottom: -50%;
+}
+
+footer#contact-form img#form-decoration-left-2-desktop.form-decoration {
+  bottom: -50%;
+  left: 30%;
+}
+
+section#about > header img.about-decoration-right {
   top: -40px;
   right: 0;
 }
 
-section#about > header img#about-decoration-left {
+section#about > header img.about-decoration-left {
   bottom: 20px;
   left: 0;
 }
@@ -453,28 +477,33 @@ section#about .card-body h3 {
   text-align: center;
 }
 
-@media (min-width: 600px) {
-  section#headline img#bg-image-headline-desktop {
-    display: initial;
+@media (min-width: 768px) {
+  img.decoration.mobile {
+    display: none;
   }
 
-  section#headline img#bg-image-headline-mobile {
-    display: none;
+  img.decoration.desktop {
+    display: initial;
   }
 
   .wrapper {
     width: 90%;
   }
 
-  footer#contact-form > form img#form-decoration {
+  footer#contact-form img.form-decoration.right {
+    right: calc(-100vw * 0.05);
+    top: 50%;
+  }
+
+  footer#contact-form img.form-decoration.left {
+    left: calc(-100vw * 0.05);
+  }
+
+  section#about > header img.about-decoration-right {
     right: calc(-100vw * 0.05);
   }
 
-  section#about > header img#about-decoration-right {
-    right: calc(-100vw * 0.05);
-  }
-
-  section#about > header img#about-decoration-left {
+  section#about > header img.about-decoration-left {
     left: calc(-100vw * 0.05);
   }
 
@@ -511,6 +540,24 @@ section#about .card-body h3 {
   section#headline {
     justify-content: center;
   }
+
+  footer#contact-form {
+    grid-template-columns: 50% 1fr;
+  }
+
+  body > .social ul {
+    margin: 24px;
+  }
+
+  body > .social .top-divider {
+    display: initial;
+    z-index: -999;
+  }
+
+  body > .social .email,
+  body > .social .divider {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -526,19 +573,6 @@ section#about .card-body h3 {
   footer#contact-form {
     grid-template-columns: 40% 1fr;
   }
-
-  body > .social ul {
-    margin: 24px;
-  }
-
-  body > .social .top-divider {
-    display: initial;
-  }
-
-  body > .social .email,
-  body > .social .divider {
-    display: none;
-  }
 }
 
 @media (min-width: 1280px) {
@@ -546,15 +580,20 @@ section#about .card-body h3 {
     width: 80%;
   }
 
-  footer#contact-form > form img#form-decoration {
+  footer#contact-form img.form-decoration.left {
+    left: calc(-100vw * 0.1);
+  }
+
+  footer#contact-form img.form-decoration.right,
+  footer#contact-form img.form-decoration {
     right: calc(-100vw * 0.1);
   }
 
-  section#about > header img#about-decoration-right {
+  section#about > header img.about-decoration-right {
     right: calc(-100vw * 0.1);
   }
 
-  section#about > header img#about-decoration-left {
+  section#about > header img.about-decoration-left {
     left: calc(-100vw * 0.1);
   }
 }
