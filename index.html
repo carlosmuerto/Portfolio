@@ -1,209 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/style.css">
-	<script src="https://kit.fontawesome.com/841b60bdd5.js" crossorigin="anonymous"></script>
-	<title>Carlos Vivas' Portfolio</title>
-</head>
-<body>
-	<div class="wrapper">
-		<header>
-			<nav class="navbar">
-				<a id="welcome" href="#">welcome</a>
-				<a id="menu-btn" href="#" class="toogleNav"><i class="fa-solid fa-bars"></i></a>
-				<ul>
-					<li><a href="#">Porfolio</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</nav>
-		</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/841b60bdd5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Carlos Vivas' Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a id="welcome" href="#">welcome</a>
+        <a id="menu-btn" href="#" class="toogleNav"
+          ><i class="fa-solid fa-bars"></i
+        ></a>
+        <ul>
+          <li><a href="#">Porfolio</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-		<!-- headline section -->
+    <!-- headline section -->
+    <main class="wrapper">
+      <section id="headline">
+        <h1>
+          Hi there I'm Carlos Vivas <br />
+          <span class="highlight">I'm a software Developer</span>
+        </h1>
+        <p class="support-text">
+          I can help you build your Product, Feature, App, or Website. You can
+          Take a look at some of my works! If you like what you see and have a
+          project to be coded, just contact me
+        </p>
+        <div class="social">
+          <ul>
+            <li class="twitter">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li class="LinkedIn">
+              <a href="https://www.linkedin.com/in/carlos-vivas-818ab831/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+            <li class="medium">
+              <a href="#"
+                ><img src="assets/headline/medium.svg" alt="medium-m"
+              /></a>
+            </li>
+            <li class="GitHub">
+              <a href="(https://github.com/carlosmuerto"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+            <li class="angellist">
+              <a href="#"><i class="fa-brands fa-angellist"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="scroll-down-btn">
+          <a href="#"><i class="fa-solid fa-chevron-down"></i></a>
+        </div>
+      </section>
 
-		<section id="headline">
-			<h1>Hi there I'm Carlos Vivas <br> <span class="highlight">I'm a software Developer</span></h1>
-			<p class="support-text">I can help you build your Product, Feature, App, or Website. You can Take a look at some of my works! If you
-					like what you see and have a project to be coded, just contact me</p>
-			<div class="social">
-				<ul>
-					<li class="twitter">
-						<a href="#"><i class="fa-brands fa-twitter"></i></a>
-					</li>
-					<li class="LinkedIn">
-						<a href="https://www.linkedin.com/in/carlos-vivas-818ab831/"><i class="fa-brands fa-linkedin"></i></a>
-					</li>
-					<li class="medium">
-						<a href="#"><img src="assets/headline/medium.svg" alt="medium-m" /></a>
-					</li>
-					<li class="GitHub">
-						<a href="(https://github.com/carlosmuerto"><i class="fa-brands fa-github"></i></a>
-					</li>
-					<li class="angellist">
-						<a href="#"><i class="fa-brands fa-angellist"></i></a>
-					</li>
+      <!-- "Works" section -->
 
-				</ul>
-			</div>
-			<div class="scroll-down-btn"><a href="#"><i class="fa-solid fa-chevron-down"></i></a></div>
-		</section>
+      <section id="works">
+        <header>
+          <h2>My Recent Works</h2>
+          <div class="divider"></div>
+        </header>
+        <article class="card">
+          <div class="card-img"><!-- an image go hear --></div>
+          <div class="card-body">
+            <h3>Multi-Post Stories Gain+Glory 01</h3>
+            <ul>
+              <li>Ruby on rails</li>
+              <li>css</li>
+              <li>JavaScript</li>
+              <li>html</li>
+            </ul>
+            <button disabled="disabled">See Project</button>
+          </div>
+        </article>
 
-		<!-- "Works" section -->
+        <article class="card">
+          <div class="card-img"><!-- an image go hear --></div>
+          <div class="card-body">
+            <h3>Multi-Post Stories Gain+Glory 02</h3>
+            <ul>
+              <li>Ruby on rails</li>
+              <li>css</li>
+              <li>JavaScript</li>
+              <li>html</li>
+            </ul>
+            <button disabled="disabled">See Project</button>
+          </div>
+        </article>
 
-		<section id="works">
-			<header>
-				<h2>My Recent Works</h2>
-				<div class="divider"></div>
-			</header>
-			<article class="card">
-				<div class="card-img"><!-- an image go hear --></div>
-				<div class="card-body">
-					<h3>Multi-Post Stories Gain+Glory 01</h3>
-					<ul>
-						<li>Ruby on rails</li>
-						<li>css</li>
-						<li>JavaScript</li>
-						<li>html</li>
-					</ul>
-					<button disabled="disabled">See Project</button>
-				</div>
-			</article>
+        <article class="card">
+          <div class="card-img"><!-- an image go hear --></div>
+          <div class="card-body">
+            <h3>Multi-Post Stories Gain+Glory 03</h3>
+            <ul>
+              <li>Ruby on rails</li>
+              <li>css</li>
+              <li>JavaScript</li>
+              <li>html</li>
+            </ul>
+            <button disabled="disabled">See Project</button>
+          </div>
+        </article>
+      </section>
 
-			<article class="card">
-				<div class="card-img"><!-- an image go hear --></div>
-				<div class="card-body">
-					<h3>Multi-Post Stories Gain+Glory 02</h3>
-					<ul>
-						<li>Ruby on rails</li>
-						<li>css</li>
-						<li>JavaScript</li>
-						<li>html</li>
-					</ul>
-					<button disabled="disabled">See Project</button>
-				</div>
-			</article>
+      <!-- "About myself" section -->
 
-			<article class="card">
-				<div class="card-img"><!-- an image go hear --></div>
-				<div class="card-body">
-					<h3>Multi-Post Stories Gain+Glory 03</h3>
-					<ul>
-						<li>Ruby on rails</li>
-						<li>css</li>
-						<li>JavaScript</li>
-						<li>html</li>
-					</ul>
-					<button disabled="disabled">See Project</button>
-				</div>
-			</article>
-		</section>
+      <section id="about">
+        <header>
+          <img
+            id="decoration1"
+            class="decoration"
+            src="assets/about/illustration-1-about-me-mobile.svg"
+            alt="decoration"
+          />
+          <img
+            id="decoration2"
+            class="decoration"
+            src="assets/about/illustration-2-about-me-mobile.svg"
+            alt="decoration"
+          />
 
-				<!-- "About myself" section -->
+          <h2>About me</h2>
+          <p>
+            I can help you build your Product, Feature, App, or Website. You can
+            Take a look at some of my works! If you like what you see and have a
+            project to be coded, just <a href="#">contact me.</a>
+          </p>
+          <button disabled="disabled">Get My Resume</button>
+        </header>
 
-				<section id="about">
-					<header>
-						<img id="decoration1" class="decoration" src="assets/about/illustration-1-about-me-mobile.svg" alt="decoration">
-						<img id="decoration2" class="decoration" src="assets/about/illustration-2-about-me-mobile.svg" alt="decoration">
-		
-						<h2>About me</h2>
-						<p>I can help you build your Product, Feature, App, or Website. You can Take a look at some of my works! If you
-							like what you see and have a project to be coded, just <a href="#">contact me.</a></p>
-						<button disabled="disabled">Get My Resume</button>
-		
-					</header>
-		
-					<article class="card">
-						<div class="card-img"><img src="assets/about/Icon-ball.svg" alt=""></div>
-						<div class="card-body">
-							<h3>Language</h3>
-							<ul>
-								<li>JavaScript</li>
-								<li>Ruby</li>
-								<li>HTML</li>
-								<li>CSS</li>
-							</ul>
-						</div>
-					</article>
-		
-					<article class="card">
-						<div class="card-img"><img src="assets/about/Icon-boxes.svg" alt=""></div>
-						<div class="card-body">
-							<h3>Frameworks</h3>
-							<ul>
-								<li>Bootstrap</li>
-								<li>Ruby on rails</li>
-								<li>RSpec</li>
-								<li>Capybara</li>
-								<li>Selenium</li>
-							</ul>
-						</div>
-					</article>
-		
-					<article class="card">
-						<div class="card-img"><img src="assets/about/Icon-zapp.svg" alt=""></div>
-						<div class="card-body">
-							<h3>Skills</h3>
-							<ul>
-								<li>JavaScript</li>
-								<li>Ruby</li>
-								<li>HTML</li>
-								<li>CSS</li>
-							</ul>
-						</div>
-					</article>
-				</section>
+        <article class="card">
+          <div class="card-img">
+            <img src="assets/about/Icon-ball.svg" alt="" />
+          </div>
+          <div class="card-body">
+            <h3>Language</h3>
+            <ul>
+              <li>JavaScript</li>
+              <li>Ruby</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </div>
+        </article>
 
-				<!-- Contact form footer -->
+        <article class="card">
+          <div class="card-img">
+            <img src="assets/about/Icon-boxes.svg" alt="" />
+          </div>
+          <div class="card-body">
+            <h3>Frameworks</h3>
+            <ul>
+              <li>Bootstrap</li>
+              <li>Ruby on rails</li>
+              <li>RSpec</li>
+              <li>Capybara</li>
+              <li>Selenium</li>
+            </ul>
+          </div>
+        </article>
 
-		<footer id="contact-form">
-			<div class="header">
-				<h2>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
-			</div>
-			<form action="https://formspree.io/f/mnqwkjkw" method="POST">
-				
-					<input type="text" name="name" placeholder="Full Name" required maxlength="30">
-					<input type="email" name="email" placeholder="Email Address" required>
-				
-				
-					<textarea name="message" required maxlength="500" placeholder="Enter Text here"></textarea>
-				
-				<!-- your other form fields go here -->
-				<button type="submit">Get in touch</button>
-				<img id="decoration3" class="decoration" src="assets/contact/illustration-contact-form.svg" alt="decoration">
-			</form>
+        <article class="card">
+          <div class="card-img">
+            <img src="assets/about/Icon-zapp.svg" alt="" />
+          </div>
+          <div class="card-body">
+            <h3>Skills</h3>
+            <ul>
+              <li>JavaScript</li>
+              <li>Ruby</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </main>
+    <!-- Contact form footer -->
 
-			
-			
+    <footer id="contact-form">
+      <div class="header">
+        <h2>
+          I'm always interested in hearing about new projects, so if you'd like
+          to chat please get in touch.
+        </h2>
+      </div>
+      <form action="https://formspree.io/f/mnqwkjkw" method="POST">
+        <input
+          type="text"
+          name="name"
+          placeholder="Full Name"
+          required
+          maxlength="30"
+        />
+        <input type="email" name="email" placeholder="Email Address" required />
 
-			<div class="social">
-				<ul>
-					<li class="twitter">
-						<a href="#"><i class="fa-brands fa-twitter"></i></a>
-					</li>
-					<li class="LinkedIn">
-						<a href="https://www.linkedin.com/in/carlos-vivas-818ab831/"><i class="fa-brands fa-linkedin"></i></a>
-					</li>
-					<li class="medium">
-						<a href="#"><img src="assets/headline/medium.svg" alt="medium-m" /></a>
-					</li>
-					<li class="GitHub">
-						<a href="(https://github.com/carlosmuerto"><i class="fa-brands fa-github"></i></a>
-					</li>
-					<li class="angellist">
-						<a href="#"><i class="fa-brands fa-angellist"></i></a>
-					</li>
+        <textarea
+          name="message"
+          required
+          maxlength="500"
+          placeholder="Enter Text here"
+        ></textarea>
 
-				</ul>
+        <!-- your other form fields go here -->
+        <button type="submit">Get in touch</button>
+        <img
+          id="decoration3"
+          class="decoration"
+          src="assets/contact/illustration-contact-form.svg"
+          alt="decoration"
+        />
+      </form>
 
-				<div class="email">
-					<p>cavivasnieto@gmail.com</p>
-				</div>
-				<div class="divider"></div>
-			</div>
-		</footer>
-	</div>
-</body>
+      <div class="social">
+        <ul>
+          <li class="twitter">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li class="LinkedIn">
+            <a href="https://www.linkedin.com/in/carlos-vivas-818ab831/"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </li>
+          <li class="medium">
+            <a href="#"
+              ><img src="assets/headline/medium.svg" alt="medium-m"
+            /></a>
+          </li>
+          <li class="GitHub">
+            <a href="(https://github.com/carlosmuerto"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li class="angellist">
+            <a href="#"><i class="fa-brands fa-angellist"></i></a>
+          </li>
+        </ul>
+
+        <div class="email">
+          <p>cavivasnieto@gmail.com</p>
+        </div>
+        <div class="divider"></div>
+      </div>
+    </footer>
+  </body>
 </html>
