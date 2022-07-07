@@ -61,15 +61,13 @@ nav.navbar ul {
 /* SECTON HEADLINE */
 
 section#headline {
-  background-image: url(../assets/headline/header-illsutration-mobile.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: calc(100vh - 5rem);
+  height: calc(100vh - 128px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   gap: 24px 0;
+  position: relative;
 }
 
 body > .social {
@@ -363,10 +361,19 @@ footer#contact-form form {
   position: relative;
 }
 
+section#headline > img.decoration,
 footer#contact-form > form img.decoration,
 section#about > header img.decoration {
   position: absolute;
   z-index: -1;
+}
+
+section#headline img#bg-image-headline-desktop {
+  display: none;
+}
+
+section#headline img#bg-image-headline-mobile {
+  width: 100vw;
 }
 
 footer#contact-form > form img#decoration3 {
@@ -447,6 +454,14 @@ section#about .card-body h3 {
 }
 
 @media (min-width: 600px) {
+  section#headline img#bg-image-headline-desktop {
+    display: initial;
+  }
+
+  section#headline img#bg-image-headline-mobile {
+    display: none;
+  }
+
   .wrapper {
     width: 90%;
   }
