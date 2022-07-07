@@ -137,6 +137,16 @@ footer#contact-form form {
   gap: 24px 0;
 }
 
+section#works .card,
+section#about .card {
+  transition: transform 0.5s ease-in-out;
+}
+
+section#works .card:hover,
+section#about .card:hover {
+  transform: scale(1.1);
+}
+
 section#about header {
   gap: 0;
 }
