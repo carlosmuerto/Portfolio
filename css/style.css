@@ -376,19 +376,19 @@ section#headline img#bg-image-headline-mobile {
   width: 100vw;
 }
 
-footer#contact-form > form img#decoration3 {
+footer#contact-form > form img#form-decoration {
   bottom: 0;
-  right: calc(-100vw * 0.1);
+  right: 0;
 }
 
-section#about > header img#decoration1 {
+section#about > header img#about-decoration-right {
   top: -40px;
-  right: calc(-100vw * 0.1);
+  right: 0;
 }
 
-section#about > header img#decoration2 {
+section#about > header img#about-decoration-left {
   bottom: 20px;
-  left: calc(-100vw * 0.1);
+  left: 0;
 }
 
 footer#contact-form form input,
@@ -466,6 +466,18 @@ section#about .card-body h3 {
     width: 90%;
   }
 
+  footer#contact-form > form img#form-decoration {
+    right: calc(-100vw * 0.05);
+  }
+
+  section#about > header img#about-decoration-right {
+    right: calc(-100vw * 0.05);
+  }
+
+  section#about > header img#about-decoration-left {
+    left: calc(-100vw * 0.05);
+  }
+
   nav.navbar ul {
     display: flex;
     gap: 32px;
@@ -532,5 +544,17 @@ section#about .card-body h3 {
 @media (min-width: 1280px) {
   .wrapper {
     width: 80%;
+  }
+
+  footer#contact-form > form img#form-decoration {
+    right: calc(-100vw * 0.1);
+  }
+
+  section#about > header img#about-decoration-right {
+    right: calc(-100vw * 0.1);
+  }
+
+  section#about > header img#about-decoration-left {
+    left: calc(-100vw * 0.1);
   }
 }
