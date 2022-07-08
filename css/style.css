@@ -4,6 +4,7 @@ html,
 body {
   max-width: 100%;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 
 * > a {
@@ -54,20 +55,38 @@ body > header {
 }
 
 header nav.navbar {
-  height: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+
+  /* styling */
+  margin: 24px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #28352f;
 }
 
 nav.navbar ul {
   display: none;
 }
 
+header nav.navbar a {
+  display: block;
+  transition: transform 0.25s ease-in-out;
+}
+
+header nav.navbar a:hover,
+header nav.navbar a:active,
+header nav.navbar a:focus {
+  transform: scale(1.2) !important;
+}
+
 /* SECTON HEADLINE */
 
 section#headline {
-  height: calc(100vh - 128px);
+  height: calc(100vh - 76px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,12 +112,52 @@ section#headline .social ul {
 }
 
 body > .social i,
+body > .social img {
+  margin: 0 10px;
+  font-size: 20px;
+  color: #505f79;
+  text-align: center;
+  transition: transform 0.5s ease-in;
+}
+
+body > .social i:hover,
+body > .social img:hover {
+  transform: scale(1.1);
+}
+
 section#headline .social i,
 section#headline .social img {
   margin: 0 10px;
   font-size: 20px;
   color: #505f79;
   text-align: center;
+  transition: transform 0.5s ease-in;
+}
+
+section#about .card-img img {
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section#headline .scroll-down-btn i {
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  border: 2px solid #acb7c3;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+section#headline .social i:hover,
+section#headline .social img:hover {
+  transform: scale(1.1);
 }
 
 section#headline .scroll-down-btn {
@@ -173,14 +232,6 @@ section#about .card-img {
   box-shadow: 0 16px 24px rgba(37, 47, 137, 0.08);
 }
 
-section#about .card-img img {
-  height: 50px;
-  width: 50px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 section#works .card-body,
 section#about .card-body {
   display: flex;
@@ -201,17 +252,6 @@ section#about .card-body ul {
 }
 
 /* STYLING */
-
-/* stylelint-disable-next-line no-descending-specificity */
-nav.navbar {
-  margin: 24px;
-  height: 28px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
-  color: #28352f;
-}
 
 section#headline h1 {
   margin: 0 24px;
@@ -236,19 +276,6 @@ section#headline .support-text {
   text-align: center;
 }
 
-section#headline .scroll-down-btn i {
-  margin: 0;
-  padding: 0;
-  height: 40px;
-  width: 40px;
-  border: 2px solid #acb7c3;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.5s ease-in-out;
-}
-
 section#headline .scroll-down-btn i:hover {
   transform: scale(1.2);
 }
@@ -267,6 +294,7 @@ button {
   font-size: 17px;
   line-height: 24px;
   color: #fff;
+  transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
 button:hover {
@@ -432,35 +460,24 @@ section#about > header img.about-decoration-left {
 
 footer#contact-form form input,
 footer#contact-form form textarea {
-  border: 1px solid #d0d9d4;
-  border-radius: 4px;
-  margin: 0 16px;
-  font-family: 'Inter', sans-serif;
+  line-height: 1.5em;
+  padding: 1em;
+  margin: 0 1em;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
-  line-height: 24px;
-  padding: 15px;
+  border: 1px solid #d0d9d4;
+  border-radius: 4px;
   box-sizing: border-box;
   color: #6b778c;
   align-self: stretch;
 }
 
-footer#contact-form form textarea::placeholder,
-footer#contact-form form input::placeholder {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
-  opacity: 1 !important;
-}
-
-footer#contact-form form input::placeholder {
-  color: #6b778c;
-}
-
-footer#contact-form form textarea::placeholder {
-  color: #091e42;
+footer#contact-form form div.input,
+footer#contact-form form div.textarea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 footer#contact-form form textarea {
@@ -469,6 +486,48 @@ footer#contact-form form textarea {
   background: #fff;
   border: 1px solid #1e488f;
   border-radius: 4px;
+}
+
+footer#contact-form form div.input label,
+footer#contact-form form div.textarea label {
+  position: absolute;
+  line-height: 1.5em;
+  padding: 1em;
+  margin: 0 1em;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  left: 0;
+  transform-origin: 0 0;
+  transition: transform 0.25s ease-in-out;
+}
+
+footer#contact-form form div.input label span,
+footer#contact-form form div.textarea label span {
+  background-color: #fff;
+  padding: 0.2em;
+  text-align: center;
+  border-radius: 2em;
+}
+
+footer#contact-form form div.input label > * {
+  color: #6b778c;
+}
+
+footer#contact-form form div.textarea label > * {
+  color: #091e42;
+}
+
+footer#contact-form form div.input input:focus + label,
+footer#contact-form form div.textarea textarea:focus + label,
+footer#contact-form form div.input input:not(:placeholder-shown) + label,
+footer#contact-form form div.textarea textarea:not(:placeholder-shown) + label {
+  transform: translateY(calc(-2em * 0.8)) scale(0.8);
+}
+
+footer#contact-form form textarea::placeholder,
+footer#contact-form form input::placeholder {
+  opacity: 0;
 }
 
 body > .social .email {
