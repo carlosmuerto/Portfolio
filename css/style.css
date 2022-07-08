@@ -4,6 +4,7 @@ html,
 body {
   max-width: 100%;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 
 * > a {
