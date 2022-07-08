@@ -222,21 +222,45 @@
         </h2>
       </div>
       <form action="https://formspree.io/f/mnqwkjkw" method="POST">
-        <input
-          type="text"
-          name="name"
-          placeholder="Full Name"
-          required
-          maxlength="30"
-        />
-        <input type="email" name="email" placeholder="Email Address" required />
+        <div class="input">
+          <input
+            id="contact-form-name-input"
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            maxlength="30"
+            required
+          />
+          <label class="input" for="contact-form-name-input">
+            <span>Full Name</span>
+          </label>
+        </div>
 
-        <textarea
-          name="message"
-          required
-          maxlength="500"
-          placeholder="Enter Text here"
-        ></textarea>
+        <div class="input">
+          <input
+            id="contact-form-email-input"
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            required
+          />
+          <label class="input" for="contact-form-email-input">
+            <span>eMail</span>
+          </label>
+        </div>
+
+        <div class="textarea">
+          <textarea
+            id="contact-form-message-textarea"
+            name="message"
+            maxlength="500"
+            placeholder="Enter Text here"
+            required
+          ></textarea>
+          <label class="input" for="contact-form-message-textarea">
+            <span> Enter Text here </span>
+          </label>
+        </div>
 
         <!-- your other form fields go here -->
         <button type="submit">Get in touch</button>
