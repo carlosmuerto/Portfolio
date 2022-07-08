@@ -72,6 +72,17 @@ nav.navbar ul {
   display: none;
 }
 
+header nav.navbar a {
+  display: block;
+  transition: transform 0.25s ease-in-out;
+}
+
+header nav.navbar a:hover,
+header nav.navbar a:active,
+header nav.navbar a:focus {
+  transform: scale(1.2) !important;
+}
+
 /* SECTON HEADLINE */
 
 section#headline {
