@@ -440,11 +440,11 @@ footer#contact-form img.form-decoration {
 }
 
 footer#contact-form img#form-decoration-left-1-desktop.form-decoration {
-  bottom: -50%;
+  bottom: -20%;
 }
 
 footer#contact-form img#form-decoration-left-2-desktop.form-decoration {
-  bottom: -50%;
+  bottom: -20%;
   left: 30%;
 }
 
@@ -566,7 +566,7 @@ section#about .card-body h3 {
 
   footer#contact-form img.form-decoration.right {
     right: calc(-100vw * 0.05);
-    top: 50%;
+    top: 20%;
   }
 
   footer#contact-form img.form-decoration.left {
