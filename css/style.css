@@ -560,6 +560,11 @@ section#about .card-body h3 {
     display: initial;
   }
 
+  footer#contact-form button {
+    align-self: flex-start;
+    margin: 1em;
+  }
+
   .wrapper {
     width: 90%;
   }
