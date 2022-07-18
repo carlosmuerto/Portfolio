@@ -3,7 +3,7 @@
 html,
 body {
   max-width: 100%;
-  overflow: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -58,9 +58,14 @@ header nav.navbar {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  position: fixed;
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: #fff;
+  z-index: 9999;
 
   /* styling */
-  margin: 24px;
+  padding: 24px;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -68,8 +73,33 @@ header nav.navbar {
   color: #28352f;
 }
 
-nav.navbar ul {
-  display: none;
+nav.navbar > ul {
+  display: flex;
+  position: absolute;
+  background-color: white;
+  z-index: 9999;
+  width: 100%;
+  height: 100vh;
+  left: -100vw;
+  flex-direction: column;
+  align-content: center;
+  justify-content: start;
+  text-align: center;
+  gap: 24px;
+  transition: left 0.25s ease-in-out;
+}
+
+nav.navbar > ul > li#menu-btn-close {
+  align-self: flex-end;
+  padding: 0 24px;
+}
+
+nav.navbar > ul.show {
+  left: 0;
+}
+
+section#headline > img.decoration {
+  width: 100vw;
 }
 
 header nav.navbar a {
@@ -86,6 +116,7 @@ header nav.navbar a:focus {
 /* SECTON HEADLINE */
 
 section#headline {
+  padding-top: 64px;
   height: calc(100vh - 76px);
   display: flex;
   justify-content: space-between;
@@ -553,6 +584,10 @@ section#about .card-body h3 {
 
 @media (min-width: 768px) {
   img.decoration.mobile {
+    display: none;
+  }
+
+  nav.navbar > ul > li#menu-btn-close {
     display: none;
   }
 
