@@ -14,10 +14,11 @@ function showNavUl() {
   }
 }
 
-// eslint-disable-next-line no-unused-vars
 function init() {
   navbarMenuBtn.addEventListener('click', showNavUl);
   navbarMenuBtnClose.forEach((element) => {
     element.addEventListener('click', showNavUl);
   });
 }
+
+window.addEventListener('load', init);
