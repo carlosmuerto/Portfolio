@@ -3,7 +3,7 @@
 const navbarUl = document.querySelector('nav.navbar > ul');
 const navbarMenuBtn = document.querySelector('nav.navbar > a#menu-btn');
 const navbarMenuBtnClose = document.querySelector(
-  'nav.navbar li#menu-btn-close'
+  'nav.navbar li#menu-btn-close',
 );
 
 function showNavUl() {
