@@ -6,8 +6,7 @@ const navbarMenuBtnClose = document.querySelector(
   'nav.navbar li#menu-btn-close'
 );
 
-function showNavUl(e) {
-  console.log(navbarUl.classList.toString());
+function showNavUl() {
   if (navbarUl.classList.contains('show')) {
     navbarUl.classList.remove('show');
   } else {
@@ -15,6 +14,7 @@ function showNavUl(e) {
   }
 }
 
+// eslint-disable-next-line no-unused-vars
 function init() {
   navbarMenuBtn.addEventListener('click', showNavUl);
   navbarMenuBtnClose.addEventListener('click', showNavUl);
