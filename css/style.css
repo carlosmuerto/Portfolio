@@ -624,6 +624,17 @@ section#about .card-body h3 {
   nav.navbar ul {
     display: flex;
     gap: 32px;
+    position: initial;
+    background-color: initial;
+    z-index: initial;
+    width: initial;
+    height: initial;
+    left: initial;
+    flex-direction: initial;
+    align-content: initial;
+    justify-content: initial;
+    text-align: initial;
+    transition: initial;
   }
 
   header nav.navbar {
