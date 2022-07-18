@@ -2,8 +2,8 @@
 
 const navbarUl = document.querySelector('nav.navbar > ul');
 const navbarMenuBtn = document.querySelector('nav.navbar > a#menu-btn');
-const navbarMenuBtnClose = document.querySelector(
-  'nav.navbar li#menu-btn-close',
+const navbarMenuBtnClose = document.querySelectorAll(
+  'nav.navbar > ul > li > a',
 );
 
 function showNavUl() {
@@ -17,5 +17,7 @@ function showNavUl() {
 // eslint-disable-next-line no-unused-vars
 function init() {
   navbarMenuBtn.addEventListener('click', showNavUl);
-  navbarMenuBtnClose.addEventListener('click', showNavUl);
+  navbarMenuBtnClose.forEach((element) => {
+    element.addEventListener('click', showNavUl);
+  });
 }
