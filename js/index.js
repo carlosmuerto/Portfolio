@@ -77,7 +77,6 @@ function modifyModal(work) {
   modal.querySelector('.card .buttons a#see-live-ver');
 }
 function showModal(index) {
-  console.log(works[index]);
   modifyModal(works[index]);
   if (modal.classList.contains('show')) {
     modal.classList.remove('show');
@@ -101,7 +100,7 @@ function initModal() {
 // init funtion
 
 function init() {
-   initModal() 
+  initModal();
   navbarMenuBtn.addEventListener('click', showNavUl);
   navbarMenuBtnClose.forEach((element) => {
     element.addEventListener('click', showNavUl);
