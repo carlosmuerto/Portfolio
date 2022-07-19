@@ -11,14 +11,6 @@ body {
   text-decoration: none;
 }
 
-a.button {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  text-decoration: none;
-  color: initial;
-}
-
 ul {
   margin: 0;
   padding: 0;
@@ -432,8 +424,7 @@ section#headline .support-text {
   text-align: center;
 }
 
-button,
-a.button {
+button {
   height: 48px;
   background: #1e488f;
   border-radius: 4px;
@@ -450,14 +441,32 @@ a.button {
   transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
-button:hover,
 a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  background: #1e488f;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 24px;
+  align-self: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  color: #fff;
+  transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+button:hover,
+a.button:hover {
   background: #1e488f;
   box-shadow: 0 8px 16px rgba(30, 72, 143, 0.24);
 }
 
 button:active,
-a.button {
+a.button:active {
   background: #0a2759;
 }
 
