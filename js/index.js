@@ -74,7 +74,8 @@ function modifyModal(work) {
     modal.querySelector('.card .technologies ul').appendChild(li);
   });
   modal.querySelector('.card .description p').textContent = work.description;
-  modal.querySelector('.card .buttons a#see-live-ver');
+  modal.querySelector('.card .buttons a#see-live-ver').href = work.linkLive;
+  modal.querySelector('.card .buttons a#see-source').href = work.linkSource;
 }
 function showModal(index) {
   modifyModal(works[index]);
