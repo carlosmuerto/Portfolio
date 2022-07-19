@@ -1,4 +1,4 @@
-/* Deleting default styling */
+/* there no way this rule make working */
 
 html,
 body {
@@ -58,6 +58,50 @@ body > header {
   align-self: stretch;
 }
 
+#modal {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#modal .overlay {
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+section#works > *,
+section#about > *,
+footer#contact-form > * {
+  grid-row: auto / span 1;
+  grid-column: 1 / -1;
+}
+
+#modal .card {
+  z-index: 5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  display: grid;
+  padding: 16px;
+  width: 1000px;
+  max-width: 80%;
+}
+
+#modal .card > * {
+  margin: 6px;
+}
+
 header nav.navbar {
   display: flex;
   justify-content: space-between;
@@ -66,7 +110,7 @@ header nav.navbar {
   width: 100vw;
   box-sizing: border-box;
   background-color: #fff;
-  z-index: 9999;
+  z-index: 2;
 
   /* styling */
   padding: 24px;
@@ -137,13 +181,28 @@ body > .social {
 }
 
 body > .social ul,
-section#headline .social ul {
+#headline .social ul {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#modal .technologies ul {
+  justify-content: start;
+}
+
+#modal .technologies ul,
+section#works .card-body ul,
+section#about .card-body ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 body > .social i,
@@ -199,9 +258,54 @@ section#headline .scroll-down-btn i {
   transition: transform 0.5s ease-in-out;
 }
 
+section#headline .scroll-down-btn i:hover {
+  transform: scale(1.2);
+}
+
+#modal .card .featured-image {
+  position: relative;
+}
+
+#modal .card .featured-image .close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 22px;
+}
+
+#modal .card .featured-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+#modal .card .buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+#modal .card .buttons .btn-link-to {
+  margin: 0;
+  width: 100%;
+}
+
 section#headline .social i:hover,
 section#headline .social img:hover {
   transform: scale(1.1);
+}
+
+#modal .card .featured-image .close-modal i {
+  color: white;
+  text-shadow:
+    2px 0 #000,
+    -2px 0 #000,
+    0 2px #000,
+    0 -2px #000,
+    1px 1px #000,
+    -1px -1px #000,
+    1px -1px #000,
+    -1px 1px #000;
 }
 
 section#headline .scroll-down-btn {
@@ -219,13 +323,6 @@ footer#contact-form {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-}
-
-section#works > *,
-section#about > *,
-footer#contact-form > * {
-  grid-row: auto / span 1;
-  grid-column: 1 / -1;
 }
 
 section#works header,
@@ -287,16 +384,6 @@ section#about .card-body {
   border-radius: 16px;
 }
 
-section#works .card-body ul,
-section#about .card-body ul {
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
 /* STYLING */
 
 section#headline h1 {
@@ -320,10 +407,6 @@ section#headline .support-text {
   margin: 0 24px;
   padding: 0 16px;
   text-align: center;
-}
-
-section#headline .scroll-down-btn i:hover {
-  transform: scale(1.2);
 }
 
 button {
@@ -412,6 +495,15 @@ section#about article.card {
   padding-bottom: 16px;
 }
 
+#modal .technologies li,
+#works .card-body li {
+  height: 32px;
+  line-height: 32px;
+  background: #ebeff4;
+  color: #3a4a42;
+}
+
+#modal .technologies li,
 section#works .card-body li,
 section#about .card-body li {
   margin: 4px;
@@ -424,13 +516,6 @@ section#about .card-body li {
   font-size: 12px;
   letter-spacing: 0.03em;
   text-align: center;
-}
-
-section#works .card-body li {
-  height: 32px;
-  line-height: 32px;
-  background: #ebeff4;
-  color: #3a4a42;
 }
 
 section#about .card-body li {
