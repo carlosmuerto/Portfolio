@@ -131,6 +131,14 @@ header nav.navbar {
   color: #28352f;
 }
 
+footer#contact-form form div.input label > * {
+  color: #6b778c;
+}
+
+footer#contact-form form div.textarea label > * {
+  color: #091e42;
+}
+
 nav.navbar > ul {
   display: flex;
   position: absolute;
@@ -688,14 +696,6 @@ footer#contact-form form div.textarea label span {
   padding: 0.2em;
   text-align: center;
   border-radius: 2em;
-}
-
-footer#contact-form form div.input label > * {
-  color: #6b778c;
-}
-
-footer#contact-form form div.textarea label > * {
-  color: #091e42;
 }
 
 footer#contact-form form div.input input:focus + label,
