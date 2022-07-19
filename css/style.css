@@ -65,6 +65,11 @@ body > header {
   bottom: 0;
   left: 0;
   right: 0;
+  transform: scale(0);
+}
+
+#modal.show {
+  transform: scale(1);
 }
 
 #modal .overlay {
@@ -296,6 +301,8 @@ section#headline .social img:hover {
 }
 
 #modal .card .featured-image .close-modal i {
+  text-align: center;
+  border-radius: 50px;
   color: white;
   text-shadow:
     2px 0 #000,
