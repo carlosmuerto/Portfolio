@@ -17,6 +17,10 @@ ul {
   list-style: none;
 }
 
+nav.navbar #menu-btn {
+  display: initial;
+}
+
 button,
 input[type="submit"],
 input[type="reset"] {
