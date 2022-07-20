@@ -65,26 +65,32 @@ function initModal() {
 // Form Validation
 const contactForm = document.querySelector('#contact-form form');
 const emailInput = document.querySelector('#contact-form form #contact-form-email-input');
-
+const erorsList = document.querySelector('#contact-form form .errors ul');
 function checkLowerCase(str) {
   return str === str.toLowerCase();
 }
-
 function checkFrom(e) {
   let someError = false;
   const EmailValidationMessage = [];
+  erorsList.textContent = '';
+  erorsList.classList.remove('show');
   if (!checkLowerCase(emailInput.value)) {
     EmailValidationMessage.push('eMail most be in lower case');
   }
-
   if (EmailValidationMessage.length > 0) {
-    emailInput.setCustomValidity(EmailValidationMessage.join(', '));
-    emailInput.reportValidity();
     someError = true;
   }
-
-  if (someError) e.preventDefault();
+  if (someError) {
+    erorsList.classList.add('active');
+    EmailValidationMessage.forEach((element) => {
+      const li = document.createElement('li');
+      li.appendChild(document.createTextNode(element));
+      erorsList.appendChild(li);
+      e.preventDefault();
+    });
+  }
 }
+
 
 // init funtion
 
