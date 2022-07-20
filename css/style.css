@@ -1,4 +1,4 @@
-/* Deleting default styling */
+/* there no way this rule make working */
 
 html,
 body {
@@ -15,6 +15,10 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+nav.navbar #menu-btn {
+  display: initial;
 }
 
 button,
@@ -54,6 +58,60 @@ body > header {
   align-self: stretch;
 }
 
+#modal {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scale(0);
+}
+
+#modal.show {
+  transform: scale(1);
+}
+
+#modal .overlay {
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+section#works > *,
+section#about > *,
+footer#contact-form > * {
+  grid-row: auto / span 1;
+  grid-column: 1 / -1;
+}
+
+#modal .card {
+  z-index: 5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  display: grid;
+  padding: 16px;
+  width: 1000px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+#modal .card > * {
+  margin: 6px;
+}
+
 header nav.navbar {
   display: flex;
   justify-content: space-between;
@@ -62,7 +120,7 @@ header nav.navbar {
   width: 100vw;
   box-sizing: border-box;
   background-color: #fff;
-  z-index: 9999;
+  z-index: 2;
 
   /* styling */
   padding: 24px;
@@ -71,6 +129,14 @@ header nav.navbar {
   font-size: 20px;
   line-height: 28px;
   color: #28352f;
+}
+
+footer#contact-form form div.input label > * {
+  color: #6b778c;
+}
+
+footer#contact-form form div.textarea label > * {
+  color: #091e42;
 }
 
 nav.navbar > ul {
@@ -133,13 +199,28 @@ body > .social {
 }
 
 body > .social ul,
-section#headline .social ul {
+#headline .social ul {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#modal .technologies ul {
+  justify-content: start !important;
+}
+
+#modal .technologies ul,
+section#works .card-body ul,
+section#about .card-body ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 body > .social i,
@@ -154,6 +235,15 @@ body > .social img {
 body > .social i:hover,
 body > .social img:hover {
   transform: scale(1.1);
+}
+
+section#works .card-img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  position: absolute;
+  top: 0;
+  height: calc(100% + 24px + 16px);
 }
 
 section#headline .social i,
@@ -186,9 +276,80 @@ section#headline .scroll-down-btn i {
   transition: transform 0.5s ease-in-out;
 }
 
+section#headline .scroll-down-btn i:hover {
+  transform: scale(1.2);
+}
+
+#modal .card .featured-image {
+  position: relative;
+}
+
+#modal .card .featured-image .close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.5rem;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+  display: inherit;
+  text-align: center;
+  border-radius: 20px;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+}
+
+#modal .card .featured-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+#modal .card .buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#modal .card .buttons a {
+  display: inline;
+}
+
+#modal .card .buttons a > * {
+  height: 1rem;
+  width: 1rem;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 1rem;
+}
+
+#modal .card .buttons .btn-link-to {
+  margin: 0;
+  width: 100%;
+}
+
 section#headline .social i:hover,
 section#headline .social img:hover {
   transform: scale(1.1);
+}
+
+#modal .card .featured-image .close-modal i {
+  height: 12px;
+  width: 12px;
+  text-align: center;
+  border-radius: 50px;
+  color: white;
+  text-shadow:
+    2px 0 #000,
+    -2px 0 #000,
+    0 2px #000,
+    0 -2px #000,
+    1px 1px #000,
+    -1px -1px #000,
+    1px -1px #000,
+    -1px 1px #000;
 }
 
 section#headline .scroll-down-btn {
@@ -206,13 +367,6 @@ footer#contact-form {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-}
-
-section#works > *,
-section#about > *,
-footer#contact-form > * {
-  grid-row: auto / span 1;
-  grid-column: 1 / -1;
 }
 
 section#works header,
@@ -234,7 +388,7 @@ section#about .card {
 
 section#works .card:hover,
 section#about .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.025);
 }
 
 section#about header {
@@ -248,6 +402,7 @@ section#about .card-img {
 }
 
 section#works .card-img {
+  position: relative;
   height: 256px;
 }
 
@@ -265,21 +420,12 @@ section#about .card-img {
 
 section#works .card-body,
 section#about .card-body {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   border-radius: 16px;
-}
-
-section#works .card-body ul,
-section#about .card-body ul {
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 /* STYLING */
@@ -307,10 +453,6 @@ section#headline .support-text {
   text-align: center;
 }
 
-section#headline .scroll-down-btn i:hover {
-  transform: scale(1.2);
-}
-
 button {
   height: 48px;
   background: #1e488f;
@@ -328,12 +470,33 @@ button {
   transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
-button:hover {
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  background: #1e488f;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 24px;
+  align-self: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+button:hover,
+a.button:hover {
   background: #1e488f;
   box-shadow: 0 8px 16px rgba(30, 72, 143, 0.24);
 }
 
-button:active {
+button:active,
+a.button:active {
   background: #0a2759;
 }
 
@@ -397,6 +560,15 @@ section#about article.card {
   padding-bottom: 16px;
 }
 
+#modal .technologies li,
+#works .card-body li {
+  height: 32px;
+  line-height: 32px;
+  background: #ebeff4;
+  color: #3a4a42;
+}
+
+#modal .technologies li,
 section#works .card-body li,
 section#about .card-body li {
   margin: 4px;
@@ -409,13 +581,6 @@ section#about .card-body li {
   font-size: 12px;
   letter-spacing: 0.03em;
   text-align: center;
-}
-
-section#works .card-body li {
-  height: 32px;
-  line-height: 32px;
-  background: #ebeff4;
-  color: #3a4a42;
 }
 
 section#about .card-body li {
@@ -541,14 +706,6 @@ footer#contact-form form div.textarea label span {
   border-radius: 2em;
 }
 
-footer#contact-form form div.input label > * {
-  color: #6b778c;
-}
-
-footer#contact-form form div.textarea label > * {
-  color: #091e42;
-}
-
 footer#contact-form form div.input input:focus + label,
 footer#contact-form form div.textarea textarea:focus + label,
 footer#contact-form form div.input input:not(:placeholder-shown) + label,
@@ -585,6 +742,60 @@ section#about .card-body h3 {
 @media (min-width: 768px) {
   img.decoration.mobile {
     display: none;
+  }
+
+  #modal .card .featured-image .close-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 22px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    background: #ebeff4;
+    border-radius: 8px;
+    align-content: center;
+    display: flex;
+  }
+
+  #modal .card .featured-image .close-modal a {
+    text-align: center;
+    color: #3a4a42;
+    text-shadow: initial;
+    margin: auto;
+    font-size: 1.5rem;
+  }
+
+  #modal .card {
+    padding-top: 78px;
+    grid-template-columns: 70% 1fr;
+    grid-template-rows: auto;
+    align-items: start;
+  }
+
+  #modal .card .featured-image {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+  }
+
+  #modal .card .name {
+    grid-row: 2 / span 1;
+    grid-column: 1 / 2;
+  }
+
+  #modal .card .technologies {
+    grid-row: 3 / span 1;
+    grid-column: 1 / 2;
+  }
+
+  #modal .card .description {
+    grid-row: 4 / span 1;
+    grid-column: 1 / -1;
+  }
+
+  #modal .card .buttons {
+    grid-row: 2 / span 2;
+    grid-column: 2 / -1;
   }
 
   nav.navbar > ul > li#menu-btn-close {

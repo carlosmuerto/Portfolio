@@ -17,6 +17,7 @@
     "url": "https://github.com/carlosmuerto/Portfolio/issues"
   },
   "homepage": "https://github.com/carlosmuerto/Portfolio#readme",
+  "type": "module",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
