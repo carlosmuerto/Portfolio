@@ -676,23 +676,28 @@ footer#contact-form form div.errors {
   display: flex;
   flex-direction: column;
 }
+
 footer#contact-form form div.errors {
   margin: 1rem;
 }
+
 footer#contact-form form div.errors ul {
   transform: scale(0);
   transition: transform 0.25s ease-in-out;
 }
+
 footer#contact-form form div.errors ul.active {
   transform: scale(1);
 }
+
 footer#contact-form form div.errors li {
   line-height: 1.5em;
   font-style: normal;
   font-weight: 400;
-  color: #9C2805;
+  color: #9c2805;
   font-size: 15px;
 }
+
 footer#contact-form form textarea {
   height: 114px;
   color: #091e42;
