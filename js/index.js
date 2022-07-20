@@ -1,5 +1,6 @@
-// Mobile menu
+import works from './works.js';
 
+// Mobile menu
 const navbarUl = document.querySelector('nav.navbar > ul');
 const navbarTitle = document.querySelector('nav.navbar > a#welcome');
 const navbarMenuBtn = document.querySelector('nav.navbar > a#menu-btn');
@@ -24,43 +25,6 @@ function showNavUl() {
 }
 // popup modal
 
-function buildWork(
-  title,
-  description,
-  featured,
-  technologies,
-  linkLive,
-  linkSource,
-) {
-  return {
-    title,
-    description,
-    featured,
-    technologies,
-    linkLive,
-    linkSource,
-  };
-}
-function BuildGenericWork(title) {
-  return buildWork(
-    title,
-    `${title} Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dolor error nam deleniti tempora excepturi iure animi aut, repellat amet aliquam illo quos eaque? Officiis ullam accusamus est soluta obcaecati?`,
-    'assets/works/Snapshoot-Portfolio.png',
-    [
-      'Ruby on rails',
-      'css',
-      'JavaScript',
-      'html',
-    ],
-    'https://carlosmuerto.github.io/Portfolio/',
-    'https://github.com/carlosmuerto/Portfolio',
-  );
-}
-const works = [
-  BuildGenericWork('Multi-Post Stories Gain+Glory 01'),
-  BuildGenericWork('Multi-Post Stories Gain+Glory 02'),
-  BuildGenericWork('Multi-Post Stories Gain+Glory 03'),
-];
 const modal = document.querySelector('#modal');
 const showModalBtn = document.querySelectorAll('#works .card-body button');
 const modalCloser = document.querySelectorAll('#modal .close-modal');
@@ -101,6 +65,7 @@ function initModal() {
 // init funtion
 
 function init() {
+  console.log(works);
   initModal();
   navbarMenuBtn.addEventListener('click', showNavUl);
   navbarMenuBtnClose.forEach((element) => {

@@ -288,8 +288,16 @@ section#headline .scroll-down-btn i:hover {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 22px;
+  margin: 0.5rem;
   cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+  display: inherit;
+  text-align: center;
+  border-radius: 20px;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
 }
 
 #modal .card .featured-image img {

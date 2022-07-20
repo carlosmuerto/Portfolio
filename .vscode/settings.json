@@ -10,6 +10,10 @@
 		"**/*.freezed.dart": true,
 		"**/*.g.dart": true
 	},
-	"prettier.singleQuote": true
-
+	"prettier.singleQuote": true,
+	"[shellscript]": {
+		"files.eol": "\n"
+	},
+	"editor.tabSize": 2,
+	"editor.detectIndentation": true
 }
