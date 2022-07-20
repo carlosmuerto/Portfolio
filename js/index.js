@@ -62,15 +62,39 @@ function initModal() {
   });
 }
 
+// Form Validation
+const contactForm = document.querySelector('#contact-form form');
+const emailInput = document.querySelector('#contact-form form #contact-form-email-input');
+
+function checkLowerCase(str) {
+  return str === str.toLowerCase();
+}
+
+function checkFrom(e) {
+  let someError = false;
+  const EmailValidationMessage = [];
+  if (!checkLowerCase(emailInput.value)) {
+    EmailValidationMessage.push('eMail most be in lower case');
+  }
+
+  if (EmailValidationMessage.length > 0) {
+    emailInput.setCustomValidity(EmailValidationMessage.join(', '));
+    emailInput.reportValidity();
+    someError = true;
+  }
+
+  if (someError) e.preventDefault();
+}
+
 // init funtion
 
 function init() {
-  console.log(works);
   initModal();
   navbarMenuBtn.addEventListener('click', showNavUl);
   navbarMenuBtnClose.forEach((element) => {
     element.addEventListener('click', showNavUl);
   });
+  contactForm.addEventListener('submit', checkFrom);
 }
 
 window.addEventListener('load', init);
