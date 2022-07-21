@@ -62,15 +62,44 @@ function initModal() {
   });
 }
 
+// Form Validation
+const contactForm = document.querySelector('#contact-form form');
+const emailInput = document.querySelector('#contact-form form #contact-form-email-input');
+const erorsList = document.querySelector('#contact-form form .errors ul');
+function checkLowerCase(str) {
+  return str === str.toLowerCase();
+}
+function checkFrom(e) {
+  let someError = false;
+  const EmailValidationMessage = [];
+  erorsList.textContent = '';
+  erorsList.classList.remove('show');
+  if (!checkLowerCase(emailInput.value)) {
+    EmailValidationMessage.push('eMail most be in lower case');
+  }
+  if (EmailValidationMessage.length > 0) {
+    someError = true;
+  }
+  if (someError) {
+    erorsList.classList.add('active');
+    EmailValidationMessage.forEach((element) => {
+      const li = document.createElement('li');
+      li.appendChild(document.createTextNode(element));
+      erorsList.appendChild(li);
+      e.preventDefault();
+    });
+  }
+}
+
 // init funtion
 
 function init() {
-  console.log(works);
   initModal();
   navbarMenuBtn.addEventListener('click', showNavUl);
   navbarMenuBtnClose.forEach((element) => {
     element.addEventListener('click', showNavUl);
   });
+  contactForm.addEventListener('submit', checkFrom);
 }
 
 window.addEventListener('load', init);
