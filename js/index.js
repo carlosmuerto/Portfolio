@@ -103,11 +103,59 @@ function initFromValidation() {
 }
 
 // Form Storage
+const nameInput = document.querySelector('#contact-form form #contact-form-name-input');
 
-function initFormStorage() {
-
+/* Check for storage Availability copy form documentation */
+function storageAvailable(type) {
+  let storage;
+  try {
+    storage = window[type];
+    const x = '__storage_test__';
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return e instanceof DOMException && (
+      // everything except Firefox
+      e.code === 22
+      // Firefox
+      || e.code === 1014
+      // test name field too, because code might not be present
+      // everything except Firefox
+      || e.name === 'QuotaExceededError'
+      // Firefox
+      || e.name === 'NS_ERROR_DOM_QUOTA_REACHED')
+      // acknowledge QuotaExceededError only if there's something already stored
+      && (storage && storage.length !== 0);
+  }
 }
 
+function updateStoreFormData(fullName, eMail, message) {
+  localStorage.setItem(
+    'contact-form-data',
+    JSON.stringify({
+      fullName,
+      eMail,
+      message,
+    }),
+  );
+}
+
+function storeInputChange(e) {
+  updateStoreFormData(e.target.value, null, null);
+}
+
+function getStoreFormData() {
+  return JSON.parse(localStorage.getItem('contact-form-data'));
+}
+
+function initFormStorage() {
+  if (!storageAvailable('localStorage')) return;
+  localStorage.getItem('contact-form-data');
+
+  nameInput.value = getStoreFormData()?.fullName ?? '';
+  nameInput.addEventListener('change', storeInputChange);
+}
 // init funtion
 
 function init() {
