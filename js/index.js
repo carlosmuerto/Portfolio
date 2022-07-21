@@ -148,14 +148,14 @@ function initFormStorage() {
   localStorage.getItem('contact-form-data');
 
   nameInput.value = getStoreFormData()?.fullName ?? '';
-  nameInput.addEventListener('change', () => {
+  nameInput.addEventListener('input', () => {
     updateStoreFormData({
       fullName: nameInput.value,
     });
   });
 
   messageTextarea.value = getStoreFormData()?.message ?? '';
-  messageTextarea.addEventListener('change', () => {
+  messageTextarea.addEventListener('input', () => {
     updateStoreFormData({
       message: nameInput.value,
     });
