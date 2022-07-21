@@ -104,6 +104,7 @@ function initFromValidation() {
 
 // Form Storage
 const nameInput = document.querySelector('#contact-form form #contact-form-name-input');
+const messageTextarea = document.querySelector('#contact-form form #contact-form-message-textarea');
 
 /* Check for storage Availability copy form documentation */
 function storageAvailable(type) {
@@ -130,23 +131,16 @@ function storageAvailable(type) {
   }
 }
 
-function updateStoreFormData(fullName, eMail, message) {
-  localStorage.setItem(
-    'contact-form-data',
-    JSON.stringify({
-      fullName,
-      eMail,
-      message,
-    }),
-  );
-}
-
-function storeInputChange(e) {
-  updateStoreFormData(e.target.value, null, null);
-}
-
 function getStoreFormData() {
   return JSON.parse(localStorage.getItem('contact-form-data'));
+}
+
+function updateStoreFormData(formObj) {
+  const toStoreObj = Object.assign(getStoreFormData(), formObj);
+  localStorage.setItem(
+    'contact-form-data',
+    JSON.stringify(toStoreObj),
+  );
 }
 
 function initFormStorage() {
@@ -154,7 +148,18 @@ function initFormStorage() {
   localStorage.getItem('contact-form-data');
 
   nameInput.value = getStoreFormData()?.fullName ?? '';
-  nameInput.addEventListener('change', storeInputChange);
+  nameInput.addEventListener('change', () => {
+    updateStoreFormData({
+      fullName: nameInput.value,
+    });
+  });
+
+  messageTextarea.value = getStoreFormData()?.message ?? '';
+  messageTextarea.addEventListener('change', () => {
+    updateStoreFormData({
+      message: nameInput.value,
+    });
+  });
 }
 // init funtion
 
