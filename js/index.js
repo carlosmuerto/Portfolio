@@ -23,6 +23,13 @@ function showNavUl() {
     navbarUl.classList.add('show');
   }
 }
+
+function initShowNav() {
+  navbarMenuBtn.addEventListener('click', showNavUl);
+  navbarMenuBtnClose.forEach((element) => {
+    element.addEventListener('click', showNavUl);
+  });
+}
 // popup modal
 
 const modal = document.querySelector('#modal');
@@ -91,15 +98,23 @@ function checkFrom(e) {
   }
 }
 
+function initFromValidation() {
+  contactForm.addEventListener('submit', checkFrom);
+}
+
+// Form Storage
+
+function initFormStorage() {
+
+}
+
 // init funtion
 
 function init() {
   initModal();
-  navbarMenuBtn.addEventListener('click', showNavUl);
-  navbarMenuBtnClose.forEach((element) => {
-    element.addEventListener('click', showNavUl);
-  });
-  contactForm.addEventListener('submit', checkFrom);
+  initShowNav();
+  initFromValidation();
+  initFormStorage();
 }
 
 window.addEventListener('load', init);
