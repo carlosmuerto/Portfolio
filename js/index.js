@@ -154,10 +154,10 @@ function initFormStorage() {
     });
   });
 
-  emailInput.value = getStoreFormData()?.eMail ?? '';
-  emailInput.addEventListener('input', () => {
+  nameInput.value = getStoreFormData()?.fullName ?? '';
+  nameInput.addEventListener('input', () => {
     updateStoreFormData({
-      eMail: emailInput.value,
+      fullName: nameInput.value,
     });
   });
 
