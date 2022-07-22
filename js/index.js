@@ -154,6 +154,13 @@ function initFormStorage() {
     });
   });
 
+  emailInput.value = getStoreFormData()?.eMail ?? '';
+  emailInput.addEventListener('input', () => {
+    updateStoreFormData({
+      eMail: emailInput.value,
+    });
+  });
+
   messageTextarea.value = getStoreFormData()?.message ?? '';
   messageTextarea.addEventListener('input', () => {
     updateStoreFormData({
