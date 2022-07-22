@@ -18,9 +18,9 @@ function showNavUl() {
   if (getStyle(navbarTitle, 'display') === 'none') return;
 
   if (navbarUl.classList.contains('show')) {
-    navbarUl.classList.remove('show');
-  } else {
     navbarUl.classList.add('show');
+  } else {
+    navbarUl.classList.remove('show');
   }
 }
 
