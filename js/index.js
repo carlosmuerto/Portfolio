@@ -23,6 +23,13 @@ function showNavUl() {
     navbarUl.classList.add('show');
   }
 }
+
+function initShowNav() {
+  navbarMenuBtn.addEventListener('click', showNavUl);
+  navbarMenuBtnClose.forEach((element) => {
+    element.addEventListener('click', showNavUl);
+  });
+}
 // popup modal
 
 const modal = document.querySelector('#modal');
@@ -91,15 +98,83 @@ function checkFrom(e) {
   }
 }
 
+function initFromValidation() {
+  contactForm.addEventListener('submit', checkFrom);
+}
+
+// Form Storage
+const nameInput = document.querySelector('#contact-form form #contact-form-name-input');
+const messageTextarea = document.querySelector('#contact-form form #contact-form-message-textarea');
+
+/* Check for storage Availability copy form documentation */
+function storageAvailable(type) {
+  let storage;
+  try {
+    storage = window[type];
+    const x = '__storage_test__';
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return e instanceof DOMException && (
+      // everything except Firefox
+      e.code === 22
+      // Firefox
+      || e.code === 1014
+      // test name field too, because code might not be present
+      // everything except Firefox
+      || e.name === 'QuotaExceededError'
+      // Firefox
+      || e.name === 'NS_ERROR_DOM_QUOTA_REACHED')
+      // acknowledge QuotaExceededError only if there's something already stored
+      && (storage && storage.length !== 0);
+  }
+}
+
+function getStoreFormData() {
+  return JSON.parse(localStorage.getItem('contact-form-data'));
+}
+
+function updateStoreFormData(formObj) {
+  const toStoreObj = Object.assign(getStoreFormData(), formObj);
+  localStorage.setItem(
+    'contact-form-data',
+    JSON.stringify(toStoreObj),
+  );
+}
+
+function initFormStorage() {
+  if (!storageAvailable('localStorage')) return;
+  localStorage.getItem('contact-form-data');
+
+  nameInput.value = getStoreFormData()?.fullName ?? '';
+  nameInput.addEventListener('input', () => {
+    updateStoreFormData({
+      fullName: nameInput.value,
+    });
+  });
+
+  emailInput.value = getStoreFormData()?.eMail ?? '';
+  emailInput.addEventListener('input', () => {
+    updateStoreFormData({
+      eMail: emailInput.value,
+    });
+  });
+
+  messageTextarea.value = getStoreFormData()?.message ?? '';
+  messageTextarea.addEventListener('input', () => {
+    updateStoreFormData({
+      message: nameInput.value,
+    });
+  });
+}
 // init funtion
 
 function init() {
   initModal();
-  navbarMenuBtn.addEventListener('click', showNavUl);
-  navbarMenuBtnClose.forEach((element) => {
-    element.addEventListener('click', showNavUl);
-  });
-  contactForm.addEventListener('submit', checkFrom);
+  initShowNav();
+  initFromValidation();
+  initFormStorage();
 }
 
 window.addEventListener('load', init);
