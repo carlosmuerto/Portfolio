@@ -51,9 +51,9 @@ function modifyModal(work) {
 function showModal(index) {
   modifyModal(works[index]);
   if (modal.classList.contains('show')) {
-    modal.classList.remove('show');
-  } else {
     modal.classList.add('show');
+  } else {
+    modal.classList.remove('show');
   }
 }
 function initModal() {
