@@ -175,7 +175,8 @@ header nav.navbar a {
 
 header nav.navbar a:hover,
 header nav.navbar a:active,
-header nav.navbar a:focus {
+header nav.navbar a:focus,
+header nav.navbar a.active {
   transform: scale(1.2) !important;
 }
 
@@ -448,9 +449,10 @@ section#headline .support-text {
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
-  margin: 0 24px;
+  margin: 0 auto;
   padding: 0 16px;
   text-align: center;
+  max-width: 600px;
 }
 
 button {
@@ -599,6 +601,8 @@ section#about > header p {
   text-align: center;
   color: #42526e;
   padding: 0 16px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 section#about > header,
