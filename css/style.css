@@ -175,7 +175,8 @@ header nav.navbar a {
 
 header nav.navbar a:hover,
 header nav.navbar a:active,
-header nav.navbar a:focus {
+header nav.navbar a:focus,
+header nav.navbar a.active {
   transform: scale(1.2) !important;
 }
 
