@@ -33,8 +33,9 @@ function initShowNav() {
 // popup modal
 
 const modal = document.querySelector('#modal');
-const showModalBtn = document.querySelectorAll('#works .card-body button');
 const modalCloser = document.querySelectorAll('#modal .close-modal');
+const worksSection = document.querySelector('#works');
+
 function modifyModal(work) {
   modal.querySelector('.card .name h3').textContent = work.title;
   modal.querySelector('.card .featured-image img').src = work.featured;
@@ -57,16 +58,58 @@ function showModal(index) {
   }
 }
 function initModal() {
-  showModalBtn.forEach((element, index) => {
-    element.addEventListener('click', () => {
-      showModal(index);
-    });
-  });
   modalCloser.forEach((element, index) => {
     element.addEventListener('click', () => {
       showModal(index);
     });
   });
+}
+
+function initWorks() {
+  works.forEach((work, index) => {
+    const article = document.createElement('article');
+    article.classList.add('card');
+
+    const cardImg = document.createElement('div');
+    cardImg.classList.add('card-img');
+
+    const image = document.createElement('img');
+    image.src = work.featured
+    image.alt = work.title
+
+    console.log(work.featured)
+
+    cardImg.appendChild(image)
+
+    article.appendChild(cardImg)
+
+    const cardBody = document.createElement('card-body');
+    cardBody.classList.add('card-body');
+
+    const title = document.createElement('h3');
+    title.appendChild(document.createTextNode(work.title));
+    cardBody.appendChild(title)
+
+    const ul = document.createElement('ul');
+    work.technologies.forEach((tech) => {
+      const li = document.createElement('li');
+      li.appendChild(document.createTextNode(tech));
+      ul.appendChild(li);
+    });
+    cardBody.appendChild(ul)
+
+    const button = document.createElement('button');
+    button.appendChild(document.createTextNode('See Project'));
+    button.addEventListener('click', () => {
+      showModal(index);
+    });
+    cardBody.appendChild(button)
+
+
+    article.appendChild(cardImg)
+    article.appendChild(cardBody)
+    worksSection.appendChild(article)
+  }); 
 }
 
 // Form Validation
@@ -198,6 +241,7 @@ function initSpyScroll() {
 // init funtion
 function init() {
   initModal();
+  initWorks();
   initShowNav();
   initFromValidation();
   initFormStorage();
