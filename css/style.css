@@ -17,6 +17,12 @@ ul {
   list-style: none;
 }
 
+a.contact-me-link {
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 nav.navbar #menu-btn {
   display: initial;
 }
