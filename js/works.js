@@ -1,7 +1,7 @@
 const works = [
   {
     title: "Doctor's App Reservations",
-    description: "Doctor's App is a SaaS made on ReactJS and Ruby on Rails API, that offer A Doctor reservations",
+    description: "Doctor Reservation Project is a Web app that allows you to make doctor's appointments, Front-End built with: React Redux. For the Back-End, we created an API with Ruby & Rails and deployed it using Render.",
     featured: 'https://user-images.githubusercontent.com/34493013/215590770-d6ad296e-6c38-483b-a6d3-5c018b116ce0.png',
     technologies: [
       'Ruby on rails',
@@ -14,8 +14,8 @@ const works = [
   },
   {
     title: 'HeathStone Card categorized',
-    description: 'web application tha consume https://rapidapi.com/omgvamp/api/hearthstone/ Restful API. The application will show all HeathStone Card categorized in diferent ways.',
-    featured: 'https://user-images.githubusercontent.com/34493013/194731370-aff2cbd5-21be-4802-a0d0-37159b8432f2.png',
+    description: "On this page, My task is to build a web application that consumes rapidapi.com's hearthstone Restful API. The application will show all HearthStone cards categorized in different ways.",
+    featured: 'https://user-images.githubusercontent.com/34493013/217884726-6e649f1f-817a-4f9c-a019-c8ebb1e3aad6.png',
     technologies: [
       'rapidapi.com',
       'SCSS',
@@ -28,7 +28,7 @@ const works = [
   {
     title: 'Math Magicians and Calculator',
     description: '"Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to: Make simple calculations and Read a random math-related quote.',
-    featured: 'https://user-images.githubusercontent.com/34493013/194669334-9fcb4d2e-77ba-4c87-a38d-886b5811cb95.png',
+    featured: 'https://user-images.githubusercontent.com/34493013/217883697-4ca94ce5-bfab-44e2-9371-6186e9347a38.png',
     technologies: [
       'JavaScript',
       'CSS',
