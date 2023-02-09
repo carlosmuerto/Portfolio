@@ -46,10 +46,41 @@ const works = [
       'JavaScript',
       'CSS',
       'HTML',
+      'SCSS preprocessor'
     ],
     linkLive: 'https://carlosmuerto.github.io/capstone-project-conference-page/',
     linkSource: 'https://github.com/carlosmuerto/capstone-project-conference-page',
   },
+  {
+    title: 'Awesome books: with ES6',
+    description: '"Awesome books" is a simple interactive website that displays a list of books and allows you to add and remove books from that list. It is built with JavaScript for DOM manipulation and for managing data in objects. ',
+    featured: 'https://user-images.githubusercontent.com/34493013/217889564-53b539dc-392c-40b4-8a01-7861728368d5.png',
+    technologies: [
+      'JavaScript',
+      'CSS',
+      'HTML',
+      'luxon',
+      'SPA',
+    ],
+    linkLive: 'https://carlosmuerto.github.io/Awesome-books-ES6/',
+    linkSource: 'https://github.com/carlosmuerto/Awesome-books-ES6',
+  },
+  {
+    title: 'To Do list: with Webpack',
+    description: 'In this project, I will build a simple HTML list of To-Do tasks. This simple web page will be built using Webpack and served by a Webpack dev server.',
+    featured: 'https://user-images.githubusercontent.com/34493013/185758223-7de7ccaf-2e60-477b-9ca3-8530822acfc3.png',
+    technologies: [
+      'JavaScript',
+      'CSS',
+      'HTML',
+      'luxon',
+      'webpack',
+      'SPA',
+    ],
+    linkLive: 'https://carlosmuerto.github.io/to-do-list-webpack/',
+    linkSource: 'https://github.com/carlosmuerto/to-do-list-webpack',
+  },
+  
 ];
 
 /*
