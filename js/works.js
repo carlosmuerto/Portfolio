@@ -54,7 +54,7 @@ const works = [
   {
     title: 'Awesome books: with ES6',
     description: '"Awesome books" is a simple interactive website that displays a list of books and allows you to add and remove books from that list. It is built with JavaScript for DOM manipulation and for managing data in objects. ',
-    featured: 'https://user-images.githubusercontent.com/34493013/217889564-53b539dc-392c-40b4-8a01-7861728368d5.png',
+    featured: 'https://user-images.githubusercontent.com/34493013/217900370-c388ef4c-a5df-4cbc-a8ea-c2d2f961b291.png',
     technologies: [
       'JavaScript',
       'CSS',
@@ -68,7 +68,7 @@ const works = [
   {
     title: 'To Do list: with Webpack',
     description: 'In this project, I will build a simple HTML list of To-Do tasks. This simple web page will be built using Webpack and served by a Webpack dev server.',
-    featured: 'https://user-images.githubusercontent.com/34493013/185758223-7de7ccaf-2e60-477b-9ca3-8530822acfc3.png',
+    featured: 'https://user-images.githubusercontent.com/34493013/217900778-56b1abd8-ffd6-4166-85de-87d134a1be20.png',
     technologies: [
       'JavaScript',
       'CSS',
