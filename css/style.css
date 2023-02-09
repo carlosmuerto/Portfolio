@@ -302,8 +302,11 @@ section#headline .scroll-down-btn i:hover {
 }
 
 #modal .card .featured-image img {
-  max-width: 100%;
+  max-width: 60%;
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 #modal .card .buttons {
